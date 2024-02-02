@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Bicing_MarcMartinez_ManuelGarcia_LLuisArtes</string>
+    <string name="app_name" translatable="false">Bicing_MarcMartinez_ManuelGarcia_LLuisArtes</string>
+    <string name="TLE">All the stations</string>
+    <string name="TLEO">All the open stations</string>
+    <string name="EF">All the favourite stations</string>
+    <string name="ENF">All non-favorite stations</string>
 </resources>

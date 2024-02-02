@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/TLE"
+        android:title="@string/TLE" />
+    <item android:id="@+id/TLEO"
+        android:title="@string/TLEO" />
+    <item android:id="@+id/EF"
+        android:title="@string/EF" />
+    <item android:id="@+id/ENF"
+        android:title="@string/ENF" />
+</menu>

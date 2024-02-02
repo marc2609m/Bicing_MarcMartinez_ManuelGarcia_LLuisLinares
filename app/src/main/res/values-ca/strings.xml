@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="TLE">Totes les estacions</string>
+    <string name="TLEO">Totes les estacions obertes</string>
+    <string name="EF">Totes les estacions favorites</string>
+    <string name="ENF">Totes les estacions no favorites</string>
+</resources>

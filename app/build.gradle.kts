@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.bicing_marcmartinez_manuelgarcia_lluisartes"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.bicing_marcmartinez_manuelgarcia_lluisartes"
