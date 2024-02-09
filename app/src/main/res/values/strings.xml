@@ -4,4 +4,10 @@
     <string name="TLEO">All the open stations</string>
     <string name="EF">All the favourite stations</string>
     <string name="ENF">All non-favorite stations</string>
+    <string name="direction">Adress :</string>
+    <string name="capacity">Capacity</string>
+    <string name="Type" >Type</string>
+    <string name="list_values" >List Values</string>
+    <string name="list_stations">List Stations</string>
+    <string name="name">Name\n</string>
 </resources>
