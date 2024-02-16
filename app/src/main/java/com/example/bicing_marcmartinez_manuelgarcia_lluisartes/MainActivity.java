@@ -3,14 +3,19 @@ package com.example.bicing_marcmartinez_manuelgarcia_lluisartes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
-
+ private RecyclerView recyclerView;
+ private AdaptorEstacion adaptorEstacion;
+ private Context context;
     Toolbar toolbar;
 
     @Override
@@ -19,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.ToolbarMenu);
         setSupportActionBar(toolbar);
+        //part de recycleview
+        recyclerView=findViewById(R.id.viewStations);
+        adaptorEstacion = new AdaptorEstacion(this);
+        recyclerView.setAdapter(adaptorEstacion);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override

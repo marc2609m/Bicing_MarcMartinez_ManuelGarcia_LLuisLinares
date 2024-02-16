@@ -12,22 +12,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class AdaptorEstacion extends RecyclerView.Adapter<AdaptorEstacion.ViewHolder> {
-    private ArrayList<Estacion> estattionList;
+    private ArrayList<Estacion> estationList;
     private Context context;
 
     public AdaptorEstacion(Context context) {
         this.context = context;
-        this.estattionList= new ArrayList<>();
+        this.estationList = new ArrayList<>();
         this.cargarDades();
     }
 
     private void cargarDades() {
 
 
-        this.estattionList.add(new Estacion(1, "Estacion A", 50, "Dirección A", "Tipo A", true));
-        this.estattionList.add(new Estacion(2, "Estacion B", 30, "Dirección B", "Tipo B", false));
-        this.estattionList.add( new Estacion(3, "Estacion C", 40, "Dirección C", "Tipo C", true));
-        this.estattionList.add( new Estacion(4, "Estacion D", 60, "Dirección D", "Tipo D", false));
+        this.estationList.add(new Estacion(1, "Estacion A", 50, "Dirección A", "Tipo A", true));
+        this.estationList.add(new Estacion(2, "Estacion B", 30, "Dirección B", "Tipo B", false));
+        this.estationList.add( new Estacion(3, "Estacion C", 40, "Dirección C", "Tipo C", true));
+        this.estationList.add( new Estacion(4, "Estacion D", 60, "Dirección D", "Tipo D", false));
     }
 
     @NonNull
@@ -38,21 +38,29 @@ public class AdaptorEstacion extends RecyclerView.Adapter<AdaptorEstacion.ViewHo
         return viewHolder;
     }
     public void onBindViewHolder(@NonNull AdaptorEstacion.ViewHolder holder, int position) {
-            Estacion estacion= this.estattionList.get(position);
+            Estacion estacion= this.estationList.get(position);
             holder.name.setText(estacion.getNom());
             holder.adress.setText(estacion.getDireccion());
-            holder.capacity.setText(estacion.getCapacidad());
+            holder.capacity.setText(estacion.getCapacidad()+"");
             holder.desciption.setText(estacion.getTipo());
-        boolean isOpen = this.estattionList.get(position).isAbierto();
+        boolean isOpen = this.estationList.get(position).isAbierto();
         holder.setIcon(isOpen);
             //tenim de fer el listener per obri informaicio directa estacio
             //holder.
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí puedes manejar el clic en el elemento del RecyclerView
+                // Por ejemplo, puedes abrir una nueva actividad o mostrar más información
+                // sobre la estación seleccionada.
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-        return this.estattionList.size();
+        return this.estationList.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         //parts de la etiqueta
